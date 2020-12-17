@@ -52,7 +52,7 @@ public class Sid {
         String yyMMdd = new SimpleDateFormat("yyMMdd").format(new Date());
         return yyMMdd + Utils.padLeft(Utils.encode(id), 10, '0');
     }
-    
+
 //    public static void main(String[] args) {
 //		String aa = new Sid().nextShort();
 //		String bb = new Sid().next();

@@ -20,17 +20,17 @@ public class Swagger2 {
 
     // swagger2配置 docket
     @Bean
-    public Docket createRestApi(){
+    public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)//指定api类型为swagger2
-        .apiInfo(apiInfo())   //用于定义api文档汇总信息
-        .select().apis(RequestHandlerSelectors.basePackage("com.cnh.controller"))
+                .apiInfo(apiInfo())   //用于定义api文档汇总信息
+                .select().apis(RequestHandlerSelectors.basePackage("com.cnh.controller"))
                 .paths(PathSelectors.any())  //所有controller
                 .build();
 
 
     }
 
-    private ApiInfo apiInfo(){
+    private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("这是一次架构之路，学习好多知识")
                 .contact(new Contact("陈南海",
